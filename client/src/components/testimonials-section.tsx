@@ -8,7 +8,8 @@ const testimonials = [
     text: "The Wedding Poets captured our day with such artistry and emotion. Every time we watch our wedding film, we relive those precious moments. Absolutely magical!",
     name: "Sarah & Michael",
     wedding: "Napa Valley Wedding",
-    image: "https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100"
+    image: "https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100",
+    package: "Signature"
   },
   {
     id: 2,
@@ -16,7 +17,8 @@ const testimonials = [
     text: "Professional, creative, and so easy to work with. They made us feel comfortable and captured our personalities perfectly. The final video exceeded all expectations!",
     name: "Emma & James",
     wedding: "Garden Wedding",
-    image: "https://images.unsplash.com/photo-1595211877493-41a4e5f236b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100"
+    image: "https://images.unsplash.com/photo-1595211877493-41a4e5f236b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100",
+    package: "Essential"
   },
   {
     id: 3,
@@ -24,7 +26,26 @@ const testimonials = [
     text: "From our engagement session to the wedding day, The Wedding Poets were incredible. Their attention to detail and artistic vision is unmatched. Highly recommend!",
     name: "Lisa & David",
     wedding: "Intimate Ceremony",
-    image: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100"
+    image: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100",
+    package: "Signature"
+  },
+  {
+    id: 4,
+    rating: 5,
+    text: "The Wedding Poets made our luxury package dreams come true! The custom music scoring and same-day teaser had our guests in tears of joy.",
+    name: "Jessica & Ryan",
+    wedding: "Napa Valley Estate",
+    image: "https://images.unsplash.com/photo-1594736797933-d0400db5f33e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100",
+    package: "Luxury"
+  },
+  {
+    id: 5,
+    rating: 5,
+    text: "Three cinematographers captured angles we never imagined possible. The raw footage access let us relive every precious second.",
+    name: "Alexandra & Marcus",
+    wedding: "Coastal Luxury Resort",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100",
+    package: "Luxury"
   }
 ];
 
@@ -39,7 +60,7 @@ export default function TestimonialsSection() {
   return (
     <motion.section
       id="testimonials"
-      className="relative bg-white py-20 z-30 shadow-2xl -mt-20 rounded-t-3xl"
+      className="relative bg-white py-20 z-50 shadow-2xl -mt-20 rounded-t-3xl"
       initial={{ y: 100 }}
       whileInView={{ y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
@@ -68,12 +89,19 @@ export default function TestimonialsSection() {
               viewport={{ once: true }}
               data-testid={`card-testimonial-${testimonial.id}`}
             >
-              <div className="flex items-center mb-4">
+              <div className="flex items-center justify-between mb-4">
                 <div className="flex text-yellow-400 text-lg">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 fill-current" />
                   ))}
                 </div>
+                <span className={`text-xs px-3 py-1 rounded-full font-medium ${
+                  testimonial.package === "Luxury" ? "bg-sage text-white" :
+                  testimonial.package === "Signature" ? "bg-champagne text-charcoal" :
+                  "bg-gray-200 text-charcoal"
+                }`}>
+                  {testimonial.package}
+                </span>
               </div>
               <p className="text-gray-700 mb-6 leading-relaxed italic" data-testid={`text-testimonial-quote-${testimonial.id}`}>
                 "{testimonial.text}"

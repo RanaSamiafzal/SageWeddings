@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Check, Camera, Plane, Clock, Star } from "lucide-react";
+import { Check, Camera, Plane, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const packages = [
@@ -51,31 +51,12 @@ const packages = [
       "Drone cinematography",
       "Raw footage access",
       "Custom music scoring",
-      "Premium delivery package",
-      "Client testimonial video creation"
+      "Premium delivery package"
     ],
     featured: false
   }
 ];
 
-const clientReviews = [
-  {
-    id: 1,
-    name: "Jessica & Ryan",
-    rating: 5,
-    text: "The Wedding Poets made our luxury package dreams come true! The custom music scoring and same-day teaser had our guests in tears of joy.",
-    wedding: "Napa Valley Estate",
-    image: "https://images.unsplash.com/photo-1594736797933-d0400db5f33e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100"
-  },
-  {
-    id: 2,
-    name: "Alexandra & Marcus",
-    rating: 5,
-    text: "Three cinematographers captured angles we never imagined possible. The raw footage access let us relive every precious second.",
-    wedding: "Coastal Luxury Resort",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100"
-  }
-];
 
 const addOns = [
   {
@@ -191,49 +172,6 @@ export default function PackagesSection() {
             </motion.div>
           ))}
         </div>
-
-        {/* Client Reviews for Luxury Package */}
-        <motion.div
-          className="mt-16 bg-white/10 backdrop-blur-sm rounded-2xl p-8"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          viewport={{ once: true }}
-        >
-          <h3 className="font-playfair text-2xl font-bold text-white text-center mb-8" data-testid="text-luxury-reviews-title">
-            Luxury Package Client Reviews
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {clientReviews.map((review) => (
-              <div key={review.id} className="bg-white/20 backdrop-blur-sm rounded-xl p-6" data-testid={`luxury-review-${review.id}`}>
-                <div className="flex text-yellow-400 mb-3">
-                  {[...Array(review.rating)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-current" />
-                  ))}
-                </div>
-                <p className="text-cream mb-4 italic" data-testid={`text-luxury-review-quote-${review.id}`}>
-                  "{review.text}"
-                </p>
-                <div className="flex items-center">
-                  <img
-                    src={review.image}
-                    alt={`${review.name} review`}
-                    className="w-10 h-10 rounded-full object-cover mr-3"
-                    data-testid={`img-luxury-review-${review.id}`}
-                  />
-                  <div>
-                    <h4 className="font-semibold text-white text-sm" data-testid={`text-luxury-review-name-${review.id}`}>
-                      {review.name}
-                    </h4>
-                    <p className="text-champagne text-xs" data-testid={`text-luxury-review-wedding-${review.id}`}>
-                      {review.wedding}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </motion.div>
 
         {/* Add-ons */}
         <motion.div
