@@ -75,7 +75,7 @@ export default function ContactSection() {
   return (
     <motion.section
       id="contact"
-      className="relative bg-cream py-20 z-50"
+      className="relative bg-cream py-20 z-50 -mt-20 rounded-t-3xl"
       initial={{ y: 100 }}
       whileInView={{ y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}

@@ -50,7 +50,7 @@ export default function PortfolioSection() {
   return (
     <motion.section
       id="portfolio"
-      className="relative bg-white py-20 z-10 shadow-2xl"
+      className="relative bg-white py-20 z-10 shadow-2xl -mt-20 rounded-t-3xl"
       initial={{ y: 100 }}
       whileInView={{ y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}

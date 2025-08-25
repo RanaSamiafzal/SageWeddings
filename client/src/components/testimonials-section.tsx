@@ -39,7 +39,7 @@ export default function TestimonialsSection() {
   return (
     <motion.section
       id="testimonials"
-      className="relative bg-white py-20 z-30 shadow-2xl"
+      className="relative bg-white py-20 z-30 shadow-2xl -mt-20 rounded-t-3xl"
       initial={{ y: 100 }}
       whileInView={{ y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}

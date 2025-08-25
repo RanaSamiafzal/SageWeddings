@@ -9,14 +9,16 @@ import Footer from "@/components/footer";
 
 export default function Home() {
   return (
-    <div className="min-h-screen overflow-x-hidden">
+    <div className="min-h-screen overflow-x-hidden relative">
       <Navigation />
       <HeroSection />
-      <PortfolioSection />
-      <ServicesSection />
-      <TestimonialsSection />
-      <PackagesSection />
-      <ContactSection />
+      <div className="relative">
+        <PortfolioSection />
+        <ServicesSection />
+        <TestimonialsSection />
+        <PackagesSection />
+        <ContactSection />
+      </div>
       <Footer />
     </div>
   );

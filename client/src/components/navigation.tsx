@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Feather, Menu, X } from "lucide-react";
+import { Menu, X, Feather } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function Navigation() {

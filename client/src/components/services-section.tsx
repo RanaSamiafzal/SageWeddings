@@ -5,73 +5,73 @@ const services = [
   {
     id: 1,
     icon: Video,
-    title: "Cinematic Videography",
-    description: "Full-day cinematic coverage capturing every emotion, detail, and moment with professional-grade equipment and artistic storytelling.",
+    title: "Cinematic Full Event Video",
+    description: "Complete cinematic documentation of your wedding day using modern filmmaking techniques, capturing every emotion and detail with artistic storytelling.",
     features: [
       "Full ceremony coverage",
       "Reception highlights",
-      "4K quality footage",
-      "Professional audio"
+      "4K cinematic quality",
+      "Professional multi-camera setup"
     ]
   },
   {
     id: 2,
     icon: Film,
-    title: "Wedding Highlights",
-    description: "Beautifully edited highlight reels that capture the essence of your wedding day in a shareable, emotional film.",
+    title: "Wedding Highlights Film",
+    description: "Beautifully crafted highlight reels that capture the essence of your celebration in a modern, shareable cinematic style.",
     features: [
       "3-5 minute highlights",
-      "Custom music selection",
-      "Social media ready",
-      "Quick turnaround"
+      "Modern editing techniques",
+      "Custom music scoring",
+      "Social media optimized"
     ]
   },
   {
     id: 3,
-    icon: Camera,
-    title: "Wedding Photography",
-    description: "Elegant couple photography and wedding documentation with a focus on natural moments and artistic composition.",
+    icon: Eye,
+    title: "Wedding Teaser",
+    description: "Quick, engaging teaser films perfect for sharing immediately after your wedding, showcasing the day's most beautiful moments.",
     features: [
-      "High-resolution images",
-      "Professional editing",
-      "Online gallery",
-      "Print release included"
+      "60-90 second teasers",
+      "Same-day delivery",
+      "Social media ready",
+      "Modern cinematography"
     ]
   },
   {
     id: 4,
-    icon: Heart,
-    title: "Engagement Sessions",
-    description: "Pre-wedding photo and video sessions at your favorite locations, perfect for save-the-dates and getting comfortable with our style.",
+    icon: Camera,
+    title: "Behind the Scenes (BTS)",
+    description: "Capture the authentic, unscripted moments - getting ready, vendor interactions, and candid family moments that complete your story.",
     features: [
-      "Location scouting",
-      "Styling guidance",
-      "Multiple outfit changes",
-      "Same-day preview"
+      "Getting ready documentation",
+      "Vendor collaboration footage",
+      "Family candid moments",
+      "Setup and preparation"
     ]
   },
   {
     id: 5,
-    icon: Eye,
-    title: "Behind the Scenes",
-    description: "Capture the unseen moments - getting ready, vendor interactions, and candid family moments that tell the complete story.",
+    icon: Heart,
+    title: "Modern Wedding Photography",
+    description: "Elegant couple photography at your favorite locations with modern composition and natural lighting techniques.",
     features: [
-      "Getting ready coverage",
-      "Vendor documentation",
-      "Candid family moments",
-      "Setup and details"
+      "Couple's favorite locations",
+      "Modern editing style",
+      "Natural light photography",
+      "High-resolution delivery"
     ]
   },
   {
     id: 6,
     icon: Palette,
-    title: "Modern Aesthetic",
-    description: "Contemporary wedding filmmaking with a focus on natural lighting, authentic emotions, and timeless elegance.",
+    title: "Modern Filmmaking Style",
+    description: "Contemporary wedding cinematography with cutting-edge techniques, natural lighting, and authentic emotional storytelling.",
     features: [
-      "Natural lighting",
-      "Authentic moments",
-      "Timeless editing",
-      "Modern techniques"
+      "Modern color grading",
+      "Natural lighting mastery",
+      "Authentic emotion capture",
+      "Contemporary editing"
     ]
   }
 ];
@@ -80,7 +80,7 @@ export default function ServicesSection() {
   return (
     <motion.section
       id="services"
-      className="relative bg-cream py-20 z-20 shadow-2xl"
+      className="relative bg-cream py-20 z-20 shadow-2xl -mt-20 rounded-t-3xl"
       initial={{ y: 100 }}
       whileInView={{ y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
@@ -92,7 +92,7 @@ export default function ServicesSection() {
             Our Wedding Services
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto" data-testid="text-services-subtitle">
-            We specialize in cinematic storytelling, capturing every precious moment with artistic vision and technical excellence.
+            We offer cinematic full video coverage, highlights, teasers, and behind-the-scenes documentation with modern filmmaking techniques. Our elegant shoots at your favorite locations create timeless memories.
           </p>
         </div>
 
