@@ -175,7 +175,7 @@ export default function PackagesSection() {
 
         {/* Add-ons */}
         <motion.div
-          className="mt-16 bg-white/10 backdrop-blur-sm rounded-2xl p-8"
+          className="mt-16 mb-12 bg-white/10 backdrop-blur-sm rounded-2xl p-8"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.6 }}
