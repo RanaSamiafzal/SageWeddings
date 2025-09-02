@@ -161,17 +161,17 @@ export default function ContactSection() {
           </motion.div>
 
           {/* Contact Form */}
-          <motion.div
-            className="bg-white rounded-3xl p-8 shadow-xl"
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
+<motion.div
+  className="bg-white rounded-3xl p-8 shadow-xl mt-12"
+  initial={{ opacity: 0, x: 50 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  transition={{ duration: 0.8 }}
+  viewport={{ once: true }}
+>
             <h3 className="font-playfair text-2xl font-bold text-charcoal mb-6" data-testid="text-form-title">
               Get In Touch
             </h3>
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6 mt-8">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-medium text-charcoal mb-2">First Name</label>

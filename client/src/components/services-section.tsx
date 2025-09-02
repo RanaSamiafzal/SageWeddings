@@ -80,7 +80,7 @@ export default function ServicesSection() {
   return (
     <motion.section
       id="services"
-      className="relative bg-cream py-20 z-20 shadow-2xl -mt-20 rounded-t-3xl"
+      className="relative bg-cream py-20 z-20 shadow-2xl -mt-20 rounded-t-3xl mb-12"
       initial={{ y: 100 }}
       whileInView={{ y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
