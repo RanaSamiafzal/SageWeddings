@@ -89,21 +89,21 @@ export default function PackagesSection() {
       transition={{ duration: 0.8, ease: "easeOut" }}
       viewport={{ once: true }}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4" data-testid="text-packages-title">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="font-playfair text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-3 sm:mb-4" data-testid="text-packages-title">
             Wedding Packages
           </h2>
-          <p className="text-base sm:text-lg text-gray-300 max-w-3xl mx-auto" data-testid="text-packages-subtitle">
+          <p className="text-sm xs:text-base sm:text-lg text-gray-300 max-w-3xl mx-auto px-2" data-testid="text-packages-subtitle">
             Choose the perfect package for your special day. Each option is designed to capture your unique love story with our signature cinematic style.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
           {packages.map((pkg, index) => (
             <motion.div
               key={pkg.id}
-              className={`rounded-3xl p-6 sm:p-8 shadow-xl hover:shadow-2xl transition-all duration-300 ${
+              className={`rounded-2xl xs:rounded-3xl p-4 xs:p-6 sm:p-8 shadow-xl hover:shadow-2xl transition-all duration-300 ${
                 pkg.featured
                   ? "bg-sage transform scale-105 relative"
                   : "bg-white"
@@ -115,43 +115,43 @@ export default function PackagesSection() {
               data-testid={`card-package-${pkg.id}`}
             >
               {pkg.featured && (
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-champagne text-charcoal px-3 py-1 rounded-full text-xs sm:text-sm font-medium">
+                <div className="absolute -top-3 xs:-top-4 left-1/2 transform -translate-x-1/2 bg-champagne text-charcoal px-2 xs:px-3 py-1 rounded-full text-xs font-medium">
                   Most Popular
                 </div>
               )}
-              
-              <div className="text-center mb-6 sm:mb-8">
-                <h3 className={`font-playfair text-xl sm:text-2xl font-bold mb-2 ${
+
+              <div className="text-center mb-4 xs:mb-6 sm:mb-8">
+                <h3 className={`font-playfair text-lg xs:text-xl sm:text-2xl font-bold mb-1 xs:mb-2 ${
                   pkg.featured ? "text-white" : "text-charcoal"
                 }`} data-testid={`text-package-name-${pkg.id}`}>
                   {pkg.name}
                 </h3>
-                <p className={`mb-3 sm:mb-4 ${
+                <p className={`mb-2 xs:mb-3 sm:mb-4 text-sm xs:text-base ${
                   pkg.featured ? "text-cream/90" : "text-gray-600"
                 }`} data-testid={`text-package-description-${pkg.id}`}>
                   {pkg.description}
                 </p>
-                <div className={`text-3xl sm:text-4xl font-bold mb-2 ${
+                <div className={`text-2xl xs:text-3xl sm:text-4xl font-bold mb-1 xs:mb-2 ${
                   pkg.featured ? "text-white" : "text-sage"
                 }`} data-testid={`text-package-price-${pkg.id}`}>
                   {pkg.price}
                 </div>
-                <p className={`${
+                <p className={`text-xs xs:text-sm ${
                   pkg.featured ? "text-cream/70" : "text-gray-500"
                 }`}>
                   Starting price
                 </p>
               </div>
 
-              <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
+              <div className="space-y-2 xs:space-y-3 sm:space-y-4 mb-4 xs:mb-6 sm:mb-8">
                 {pkg.features.map((feature, featureIndex) => (
-                  <div key={featureIndex} className="flex items-center" data-testid={`text-package-feature-${pkg.id}-${featureIndex}`}>
-                    <Check className={`mr-3 w-4 h-4 sm:w-5 sm:h-5 ${
+                  <div key={featureIndex} className="flex items-start" data-testid={`text-package-feature-${pkg.id}-${featureIndex}`}>
+                    <Check className={`mr-2 xs:mr-3 w-3 h-3 xs:w-4 xs:h-4 sm:w-5 sm:h-5 mt-0.5 ${
                       pkg.featured ? "text-white" : "text-sage"
                     }`} />
-                    <span className={
+                    <span className={`text-sm xs:text-base ${
                       pkg.featured ? "text-cream" : "text-gray-700"
-                    }>
+                    }`}>
                       {feature}
                     </span>
                   </div>
@@ -159,14 +159,14 @@ export default function PackagesSection() {
               </div>
 
               <Button
-                className={`w-full py-2 sm:py-3 rounded-full font-medium transition-colors ${
+                className={`w-full py-2 xs:py-2.5 sm:py-3 rounded-full font-medium transition-colors text-sm xs:text-base ${
                   pkg.featured
                     ? "bg-white hover:bg-cream text-sage"
                     : "bg-sage hover:bg-sage/90 text-white"
                 }`}
                 data-testid={`button-package-${pkg.id}`}
               >
-                {pkg.id === "signature" ? "Choose Signature" : 
+                {pkg.id === "signature" ? "Choose Signature" :
                  pkg.id === "luxury" ? "Go Luxury" : "Get Started"}
               </Button>
             </motion.div>
@@ -175,26 +175,26 @@ export default function PackagesSection() {
 
         {/* Add-ons */}
         <motion.div
-          className="mt-12 mb-12 bg-white/10 backdrop-blur-sm rounded-2xl p-6 sm:p-8"
+          className="mt-8 xs:mt-10 sm:mt-12 mb-8 xs:mb-10 sm:mb-12 bg-white/10 backdrop-blur-sm rounded-xl xs:rounded-2xl p-4 xs:p-6 sm:p-8"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.6 }}
           viewport={{ once: true }}
         >
-          <h3 className="font-playfair text-xl sm:text-2xl font-bold text-white text-center mb-6 sm:mb-8" data-testid="text-addons-title">
+          <h3 className="font-playfair text-lg xs:text-xl sm:text-2xl font-bold text-white text-center mb-4 xs:mb-6 sm:mb-8" data-testid="text-addons-title">
             Popular Add-Ons
           </h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 xs:gap-4 sm:gap-6">
             {addOns.map((addOn, index) => (
               <div key={index} className="text-center text-white" data-testid={`addon-${index}`}>
-                <addOn.icon className="w-6 h-6 sm:w-8 sm:h-8 text-champagne mb-2 sm:mb-3 mx-auto" />
-                <h4 className="font-semibold mb-1 sm:mb-2" data-testid={`text-addon-title-${index}`}>
+                <addOn.icon className="w-5 h-5 xs:w-6 xs:h-6 sm:w-8 sm:h-8 text-champagne mb-1 xs:mb-2 sm:mb-3 mx-auto" />
+                <h4 className="font-semibold mb-1 text-sm xs:text-base" data-testid={`text-addon-title-${index}`}>
                   {addOn.title}
                 </h4>
-                <p className="text-cream/70 text-xs sm:text-sm mb-1 sm:mb-2" data-testid={`text-addon-description-${index}`}>
+                <p className="text-cream/70 text-xs mb-1" data-testid={`text-addon-description-${index}`}>
                   {addOn.description}
                 </p>
-                <p className="text-champagne font-bold" data-testid={`text-addon-price-${index}`}>
+                <p className="text-champagne font-bold text-sm xs:text-base" data-testid={`text-addon-price-${index}`}>
                   {addOn.price}
                 </p>
               </div>
