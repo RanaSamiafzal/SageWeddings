@@ -52,6 +52,12 @@ export default function Footer() {
             >
               Contact
             </button>
+            <a
+              href="/login"
+              className="text-gray-400 hover:text-white transition-colors text-sm"
+            >
+              Admin
+            </a>
           </div>
           <div className="border-t border-gray-700 pt-6">
             <p className="text-gray-500 text-sm" data-testid="text-footer-copyright">
